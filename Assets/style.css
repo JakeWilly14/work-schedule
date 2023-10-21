@@ -45,6 +45,11 @@ textarea {
   color: white;
 }
 
+.waiting {
+  background-color: #64d6f0;
+  
+}
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;

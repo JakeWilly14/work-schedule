@@ -35,6 +35,85 @@ var fivePm = $('#hour-17');
 nineAm = dayjs().hour(17).hour();
 // assigning variable to current hour of day
 var currentHour = dayjs().hour();
+console.log(currentHour);
+
+
+
+// if the current hour is within the time block 
+// it adds the class of 'present'
+// if it is within the hours of 12am and 8:59am then it resets class to 'waiting'
+// else if the time is not within the above hours it will class list 'past'.
+if (currentHour >= nineAm && currentHour < tenAm) {
+  $('#hour-9').addClass('present');
+} else if (currentHour >= 0 && currentHour < nineAm) {
+  $('#hour-9').addClass('waiting');
+} else {
+  $('#hour-9').addClass('past')
+}
+
+if (currentHour >= tenAm && currentHour < elevenAmAm) {
+  $('#hour-10').addClass('present');
+} else if (currentHour >= 0 && currentHour < nineAm) {
+  $('#hour-10').addClass('waiting');
+} else {
+  $('#hour-10').addClass('past')
+}
+
+if (currentHour >= elevenAm && currentHour < twelvePm) {
+  $('#hour-11').addClass('present');
+} else if (currentHour >= 0 && currentHour < nineAm) {
+  $('#hour-11').addClass('waiting');
+} else {
+  $('#hour-11').addClass('past')
+}
+
+if (currentHour >= twelvePm && currentHour < onePm) {
+  $('#hour-12').addClass('present');
+} else if (currentHour >= 0 && currentHour < nineAm) {
+  $('#hour-12').addClass('waiting');
+} else {
+  $('#hour-12').addClass('past')
+}
+
+if (currentHour >= onePm && currentHour < twoPm) {
+  $('#hour-13').addClass('present');
+} else if (currentHour >= 0 && currentHour < nineAm) {
+  $('#hour-13').addClass('waiting');
+} else {
+  $('#hour-13').addClass('past')
+}
+
+if (currentHour >= twoPm && currentHour < threePm) {
+  $('#hour-14').addClass('present');
+} else if (currentHour >= 0 && currentHour < nineAm) {
+  $('#hour-14').addClass('waiting');
+} else {
+  $('#hour-14').addClass('past')
+}
+
+if (currentHour >= threePm && currentHour < fourPm) {
+  $('#hour-15').addClass('present');
+} else if (currentHour >= 0 && currentHour < nineAm) {
+  $('#hour-15').addClass('waiting');
+} else {
+  $('#hour-15').addClass('past')
+}
+
+if (currentHour >= fourPm && currentHour < fivePm) {
+  $('#hour-16').addClass('present');
+} else if (currentHour >= 0 && currentHour < nineAm) {
+  $('#hour-16').addClass('waiting');
+} else {
+  $('#hour-16').addClass('past')
+}
+
+if (currentHour >= fivePm && currentHour < dayjs().hour(6).hour()) {
+  $('#hour-17').addClass('present');
+} else if (currentHour >= 0 && currentHour < nineAm) {
+  $('#hour-17').addClass('waiting');
+} else {
+  $('#hour-17').addClass('past')
+}
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
