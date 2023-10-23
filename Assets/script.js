@@ -50,42 +50,84 @@ var threeBtn = $('#three-btn');
 var fourBtn = $('#four-btn');
 var fiveBtn = $('#five-btn');
 
+var nineInput = $('#9-text');
+var tenInput = $('#10-text');
+var elevenInput = $('#11-text'); 
+var twelveInput = $('#12-text');
+var oneInput = $('#1-text');
+var twoInput = $('#2-text');
+var threeInput = $('#3-text');
+var fourInput = $('#4-text');
+var fiveInput = $('#5-text');
+
 // jquery event method used hear save buttons and log the timeblock and message.
 nineBtn.on('click', function () {
-  console.log('9AM Message');
+  var nineText = document.getElementById('9-text').value;
+
+  localStorage.setItem('timeText', nineText);
+  console.log(nineText);
 })
 
 tenBtn.on('click', function () {
-  console.log('10AM Message');
+  var tenText = document.getElementById('10-text').value;
+
+  localStorage.setItem('timeText', tenText);
+  console.log(tenText);
 })
 
 elevenBtn.on('click', function () {
-  console.log('11AM Message');
+  var elevenText = document.getElementById('11-text').value;
+
+  localStorage.setItem('timeText', elevenText);
+  console.log(elevenText);
 })
 
 twelveBtn.on('click', function () {
-  console.log('12PM Message');
+  var twelveText = document.getElementById('12-text').value;
+
+  localStorage.setItem('timeText', twelveText);
+  console.log(twelveText);
 })
 
 oneBtn.on('click', function () {
-  console.log('1PM Message');
+  var oneText = document.getElementById('1-text').value;
+
+  localStorage.setItem('timeext', oneText);
+  console.log(oneText);
 })
 
 twoBtn.on('click', function () {
-  console.log('2PM Message');
+  var twoText = document.getElementById('2-text').value;
+
+  localStorage.setItem('timeText', twoText);
+  console.log(twoText);
 })
 
 threeBtn.on('click', function () {
-  console.log('3PM Message');
+  var threeText = document.getElementById('3-text').value;
+
+  localStorage.setItem('threeText', threeText);
+  console.log(threeText);
 })
 
 fourBtn.on('click', function () {
-  console.log('4PM Message');
+  var fourText = document.getElementById('4-text').value;
+
+  localStorage.setItem('timeText', fourText);
+  console.log(fourText);
 })
 
 fiveBtn.on('click', function () {
-  console.log('5PM Message');
+  var fiveText = document.getElementById('5-text').value;
+
+  localStorage.setItem('timeText', fiveText);
+  console.log(fiveText);
 })
+
+var nineValue = localStorage.getItem('nineText');
+nineInput.textContent = nineValue;
+console.log(nineValue);
+
 
 // if the current hour is within the time block 
 // it adds the class of 'present'
@@ -94,7 +136,9 @@ fiveBtn.on('click', function () {
 
 if (currentHour >= nineAm && currentHour < tenAm) {
   $('#hour-9').addClass('present');
-} else {
+} else if (currentHour >= 0 && currentHour < nineAm) {
+  $('#hour-9').addClass('future');
+ } else {
   $('#hour-9').addClass('past')
 }
 
