@@ -8,7 +8,7 @@ You can enter messages into the timeblocks to be saved into the local storage wh
 
 ## Installation
 
-Deployed URL link here.
+https://jakewilly14.github.io/work-schedule/
 
 ## Usage
 
